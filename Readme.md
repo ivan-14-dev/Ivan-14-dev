@@ -243,8 +243,8 @@
 <p align="center">
   <img src="https://raw.githubusercontent.com/ivan-14-dev/ivan-14-dev/output/github-contribution-grid-snake.svg" alt="GitHub Contribution Snake" onerror="this.style.display='none'; document.getElementById('snake-fallback').style.display='block';" />
   <div id="snake-fallback" style="display: none; padding: 20px; background: #f3f4f6; border-radius: 8px; margin: 20px;">
-    <p style="color: #1e3a8a; font-weight: bold;">🐍 GitHub Snake Animation</p>
-    <p style="color: #6b7280; font-size: 14px;">Configurez le workflow GitHub Actions pour voir l'animation de vos contributions</p>
+    <p style="color: #1e3a8a; font-weight: bold;">Snake Animation</p>
+    <!-- <p style="color: #6b7280; font-size: 14px;">Configurez le workflow GitHub Actions pour voir l'animation de vos contributions</p> -->
   </div>
 </p>
 
