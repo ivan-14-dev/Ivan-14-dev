@@ -26,7 +26,7 @@
 </p>
 
 <p align="center">
-  <a href="https://portfolio-tawny-psi-57.vercel.app"><b>Portfolio</b></a> ·
+  <a href="https://mr-dev.me"><b>Portfolio</b></a> ·
   <a href="https://github.com/ivan-14-dev?tab=repositories"><b>Projects</b></a> ·
   <a href="mailto:ivanbayigabogmis0@gmail.com"><b>Email</b></a>
 </p>
@@ -174,7 +174,7 @@ Source: GitHub's official contribution calendar. Contributions include more than
 </p>
 
 <p align="center">
-  <a href="https://portfolio-tawny-psi-57.vercel.app">
+  <a href="https://mr-dev.me">
     <img src="https://img.shields.io/badge/Portfolio-1e3a8a?style=for-the-badge&amp;logo=googlechrome&amp;logoColor=white" alt="Visit my portfolio" />
   </a>
   <a href="mailto:ivanbayigabogmis0@gmail.com">
