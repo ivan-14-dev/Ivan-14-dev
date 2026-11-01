@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="270" viewBox="0 0 900 270" role="img" aria-labelledby="title description">
+  <title id="title">Verified GitHub contributions: 675 through October 31, 2026</title>
+  <desc id="description">A dated snapshot of GitHub's official contribution calendar: 77 contributions in 2025 and 598 from January 1 to October 31, 2026. This is not a live counter.</desc>
+  <defs>
+    <linearGradient id="border" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1e3a8a"/>
+      <stop offset="1" stop-color="#60a5fa"/>
+    </linearGradient>
+  </defs>
+  <rect x="1" y="1" width="898" height="268" rx="20" fill="#0d1117" stroke="url(#border)" stroke-width="2"/>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <circle cx="38" cy="38" r="5" fill="#22c55e"/>
+    <text x="54" y="43" font-size="15" font-weight="700" letter-spacing="2" fill="#93c5fd">VERIFIED GITHUB CONTRIBUTIONS</text>
+    <text x="34" y="122" font-size="68" font-weight="700" fill="#ffffff">675</text>
+    <text x="36" y="151" font-size="16" fill="#bfdbfe">Total since account creation</text>
+    <text x="36" y="179" font-size="13" fill="#94a3b8">Through October 31, 2026 (UTC)</text>
+    <rect x="405" y="73" width="218" height="127" rx="12" fill="#111d32" stroke="#1e3a8a"/>
+    <text x="426" y="104" font-size="14" font-weight="700" fill="#93c5fd">2025</text>
+    <text x="424" y="150" font-size="40" font-weight="700" fill="#ffffff">77</text>
+    <text x="426" y="177" font-size="13" fill="#94a3b8">Full calendar year</text>
+    <rect x="643" y="73" width="222" height="127" rx="12" fill="#111d32" stroke="#1e3a8a"/>
+    <text x="664" y="104" font-size="14" font-weight="700" fill="#93c5fd">2026</text>
+    <text x="662" y="150" font-size="40" font-weight="700" fill="#ffffff">598</text>
+    <text x="664" y="177" font-size="13" fill="#94a3b8">January 1 - October 31</text>
+    <path d="M34 217 H866" stroke="#1e293b"/>
+    <text x="36" y="244" font-size="13" fill="#94a3b8">Source: GitHub contribution calendar. Dated snapshot, not a live counter.</text>
+  </g>
+</svg>
