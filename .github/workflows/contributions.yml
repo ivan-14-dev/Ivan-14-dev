@@ -1,0 +1,46 @@
+name: Update contribution totals
+
+on:
+  schedule:
+    - cron: "15 0 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - scripts/update_contributions.py
+      - tests/test_contributions.py
+      - .github/workflows/contributions.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: contribution-totals
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+      - name: Test contribution counter
+        run: python -m unittest discover -s tests
+      - name: Fetch official contribution totals
+        env:
+          GH_TOKEN: ${{ secrets.CONTRIBUTIONS_TOKEN || github.token }}
+        run: python scripts/update_contributions.py
+      - name: Commit refreshed totals
+        run: |
+          if git diff --quiet -- assets/contributions.svg; then
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/contributions.svg
+          git commit -m "Update official contribution totals"
+          git push origin HEAD:main

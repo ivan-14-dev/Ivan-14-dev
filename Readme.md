@@ -137,18 +137,26 @@ Design documentation from the GinDHO repository, not application screenshots.
 
 <p align="center">
   <a href="https://github.com/ivan-14-dev?tab=overview">
-    <img src="assets/contributions.svg" alt="Verified GitHub contributions through October 31, 2026: 675 total, including 77 in 2025 and 598 in 2026. Dated snapshot, not a live counter." width="900" />
+    <img src="assets/contributions.svg" alt="All-time GitHub contributions, with yearly totals and the last successful update time. Refreshed daily from GitHub's official API, not live." width="900" />
   </a>
 </p>
 
-**675 contributions recorded by GitHub from account creation through October 31, 2026 (UTC).**
+**All-time contributions reported by GitHub, refreshed daily with a breakdown by calendar year.**
 
-| Period | Contributions |
-| --- | ---: |
-| [2025](https://github.com/ivan-14-dev?tab=overview&from=2025-01-01&to=2025-12-31) | 77 |
-| [January 1 - October 31, 2026](https://github.com/ivan-14-dev?tab=overview&from=2026-01-01&to=2026-10-31) | 598 |
+Source: GitHub's official GraphQL `contributionCalendar.totalContributions`, summed across all contribution years and every year since account creation. Each year is queried separately, with the current year ending at the update time (UTC). No estimated or manually added contributions.
 
-Source: GitHub's official contribution calendar. Contributions include more than commits; this is a dated snapshot, not a live counter. The profile's rolling-year total covers a different period.
+Contributions include more than commits. Only activity counted by GitHub and visible to the API is included; inaccessible private activity cannot be guaranteed. The profile's rolling-year total covers a different period. This card does not change GitHub's attribution rules: eligible commits must use an email associated with my GitHub account and be on the default or `gh-pages` branch of a non-fork repository. See [GitHub's contribution rules](https://docs.github.com/en/account-and-profile/reference/profile-contributions-reference) and [how to display private contributions](https://docs.github.com/en/account-and-profile/how-tos/contribution-settings/manage-visibility-settings-for-private-contributions-and-achievements).
+
+<details>
+<summary><b>How this counter stays up to date</b></summary>
+
+The `Update contribution totals` GitHub Actions workflow refreshes the card daily at 00:15 UTC (scheduled runs may be delayed), or manually using **Run workflow**. The timestamp on the card always shows the last successful data retrieval. If GitHub returns an error or an incomplete response, the workflow fails without replacing the previous card with a misleading zero or partial total.
+
+The workflow uses `GITHUB_TOKEN` by default. An optional repository Actions secret named `CONTRIBUTIONS_TOKEN` can supply a token authorized to read additional contributions; never commit a token. Only aggregate yearly counts are published, not private repository names or activity details.
+
+To refresh locally with an authenticated GitHub CLI, run `python scripts/update_contributions.py`. Run the counter tests with `python -m unittest discover -s tests`. Automated card updates are authored by `github-actions[bot]`, not by my account.
+
+</details>
 
 <p align="center">
   <a href="https://github.com/ivan-14-dev?tab=overview"><b>View my live contribution graph →</b></a>
